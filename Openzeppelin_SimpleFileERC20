@@ -7,6 +7,8 @@ Optimisation disabled
 Compiler 8.26 or 8.20
 EVM default or paris
 
+Compile this in remix.etherium.org
+
 [code]
 // SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
