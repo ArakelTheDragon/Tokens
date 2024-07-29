@@ -1,0 +1,106 @@
+To retrieve and validate transactions on the BNB Smart Chain, you can use the `web3.py` library to interact with the blockchain. Below are the steps to get transactions for validation:
+
+1. **Connect to a BNB Smart Chain node.**
+2. **Retrieve transactions by block number or address.**
+3. **Validate the transactions.**
+
+### Steps to Retrieve and Validate Transactions:
+
+1. **Connect to the BNB Smart Chain:**
+
+```python
+from web3 import Web3
+
+# Connect to BNB Smart Chain node (public RPC or your own node)
+bsc_rpc_url = 'https://bsc-dataseed.binance.org/' # Public RPC endpoint
+web3 = Web3(Web3.HTTPProvider(bsc_rpc_url))
+
+# Check if the connection is successful
+if web3.isConnected():
+    print("Connected to BNB Smart Chain")
+else:
+    print("Connection failed")
+    exit()
+```
+
+2. **Retrieve Transactions by Block Number:**
+
+```python
+block_number = 12345678 # Replace with the actual block number
+
+# Get the block
+block = web3.eth.getBlock(block_number, full_transactions=True)
+
+if block and 'transactions' in block:
+    for transaction in block['transactions']:
+        print(f"Transaction hash: {transaction['hash'].hex()}")
+        print(f"From: {transaction['from']}")
+        print(f"To: {transaction['to']}")
+        print(f"Value: {web3.fromWei(transaction['value'], 'ether')} BNB")
+        print(f"Gas: {transaction['gas']}")
+        print(f"Gas Price: {web3.fromWei(transaction['gasPrice'], 'gwei')} Gwei")
+        print("------")
+else:
+    print("No transactions found in this block")
+```
+
+3. **Retrieve Transactions by Address:**
+
+To get transactions by address, you typically need to query an external service or indexer because `web3.py` does not provide a direct way to query transactions by address from the node. Services like BscScan API can be used to fetch transactions for a specific address.
+
+Here’s an example using the BscScan API:
+
+```python
+import requests
+
+bscscan_api_key = 'YOUR_BSCSCAN_API_KEY'
+address = 'YOUR_ADDRESS'
+url = f'https://api.bscscan.com/api?module=account&action=txlist&address={address}&startblock=0&endblock=99999999&sort=asc&apikey={bscscan_api_key}'
+
+response = requests.get(url)
+data = response.json()
+
+if data['status'] == '1' and 'result' in data:
+    for transaction in data['result']:
+        print(f"Transaction hash: {transaction['hash']}")
+        print(f"From: {transaction['from']}")
+        print(f"To: {transaction['to']}")
+        print(f"Value: {web3.fromWei(int(transaction['value']), 'ether')} BNB")
+        print(f"Gas: {transaction['gas']}")
+        print(f"Gas Price: {web3.fromWei(int(transaction['gasPrice']), 'gwei')} Gwei")
+        print("------")
+else:
+    print("No transactions found or error occurred")
+```
+
+### Key Points:
+1. **BscScan API:** Sign up for an API key on BscScan to use their service. Replace `YOUR_BSCSCAN_API_KEY` with your actual API key.
+2. **Transaction Details:** The retrieved transactions include hash, sender, recipient, value, gas, and gas price.
+
+### Validation Example:
+
+You can integrate the validation logic from the previous example with the transaction retrieval logic. For instance, validating that a transaction matches specific criteria:
+
+```python
+expected_sender = 'EXPECTED_SENDER_ADDRESS'
+expected_receiver = 'EXPECTED_RECEIVER_ADDRESS'
+expected_amount = web3.toWei(1, 'ether') # Replace with expected amount
+
+for transaction in data['result']:
+    if (transaction['from'].lower() == expected_sender.lower() and
+        transaction['to'].lower() == expected_receiver.lower() and
+        int(transaction['value']) == expected_amount):
+        
+        print(f"Transaction hash: {transaction['hash']}")
+        print(f"From: {transaction['from']}")
+        print(f"To: {transaction['to']}")
+        print(f"Value: {web3.fromWei(int(transaction['value']), 'ether')} BNB")
+        print(f"Gas: {transaction['gas']}")
+        print(f"Gas Price: {web3.fromWei(int(transaction['gasPrice']), 'gwei')} Gwei")
+        print("Transaction details match expected values")
+        print("------")
+    else:
+        print(f"Transaction hash: {transaction['hash']} does not match expected values")
+```
+
+This combined approach allows you to retrieve and validate transactions on the BNB Smart Chain efficiently.
