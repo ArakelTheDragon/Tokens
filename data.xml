@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <email>user1@example.com</email>
+        <visit_count>2</visit_count>
+        <rewards>code123,code456</rewards>
+    </user>
+    <user>
+        <email>user2@example.com</email>
+        <visit_count>1</visit_count>
+        <rewards>code789</rewards>
+    </user>
+</users>
+
