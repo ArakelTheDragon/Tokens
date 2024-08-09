@@ -9,10 +9,10 @@ Creating ERC-20 token on Rinkeby Testnet, using Remix IDE (Solidity ^0.8.14)
 
 ## Token Details
 
-- Token name: Salchain
-- Symbol: SAL
-- Decimals: 10
-- Total Supply: 100
+- Token name: WorkTHR
+- Symbol: WorkTHR
+- Decimals: 18
+- Total Supply: 999999999
 
 
 
