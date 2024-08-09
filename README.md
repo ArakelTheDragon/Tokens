@@ -4,8 +4,10 @@ This is the repository for our token WorkTH/R/P
 It uses the Salchain code with remix.etherium.org.
 https://github.com/ArakelTheDragon/https-github.com-ArakelTheDragon-Library_Other-SalChainERC20
 
-# Creating ERC20-Token
-Creating ERC-20 token on Rinkeby Testnet, using Remix IDE (Solidity ^0.8.14)
+The original token is based on the ERC-20, ours is based on the BEP-20
+
+# Creating BEP20-Token
+Creating BEP-20 token on bnb chain, using Remix IDE (Solidity ^0.8.14)
 
 ## Token Details
 
@@ -16,9 +18,9 @@ Creating ERC-20 token on Rinkeby Testnet, using Remix IDE (Solidity ^0.8.14)
 
 
 
-## Etherscan - Rinkeby
+## bscscan - WorkToken WorkTHR
 
-[Link: SAL Token](https://rinkeby.etherscan.io/token/0x4D8240a358D96fc5ba949D990eE7b0d12852B4c8)
+[Link: WorkToken](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
 
 
 
