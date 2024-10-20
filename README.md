@@ -8,6 +8,8 @@ The original token is based on the ERC-20, ours is based on the BEP-20
 
 Our token on the minme blockchain is called [WorkTH](https://www.mintme.com/token/WorkTH).
 
+You can monitor the results from your mining on https://sa.free.bg/stats.txt
+
 # Creating BEP20-Token
 Creating BEP-20 token on bnb chain, using Remix IDE (Solidity ^0.8.14)
 NVM Paris
