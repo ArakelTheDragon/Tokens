@@ -30,5 +30,17 @@ Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before v
 Token contract:
 https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00#code#L1
 
+## Token MINTME Details
+
+- Token name: WorkTH
+- Symbol: WorkTH
+- Decimals: 18
+- Total Supply: 10000000
+
+Address: 0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
+
 MINTME token explorer:
 https://www.mintme.com/explorer/token/0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
+
+Market for trade and buying:
+https://www.mintme.com/token/WorkTH/MINTME/trade
