@@ -8,15 +8,13 @@ The original token is based on the ERC-20, ours is based on the BEP-20
 
 Our token on the minme blockchain is called [WorkTH](https://www.mintme.com/token/WorkTH).
 
-You can monitor the results from your mining on https://sa.free.bg/stats.txt
-
 # Creating BEP20-Token
 Creating BEP-20 token on bnb chain, using Remix IDE (Solidity ^0.8.14)
 NVM Paris
 No optimization
 Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before verifying it on [[bscscan.com](https://bscscan.com/advanced-filter?fadd=0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00&tadd=0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00&txntype=2)](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
 
-## Token Details
+## Token BSCSCAN Details
 
 - Token name: WorkTHR
 - Symbol: WorkTHR
@@ -29,5 +27,101 @@ Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before v
 
 [Link: WorkToken](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
 
+Token contract:
+[code]
+/**
+ *Submitted for verification at BscScan.com on 2024-06-20
+*/
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.14;
+
+interface IERC20 {
+
+    function totalSupply() external view returns (uint256);
+    function balanceOf(address account) external view returns (uint256);
+    function allowance(address owner, address spender) external view returns (uint256);
+
+    function transfer(address recipient, uint256 amount) external returns (bool);
+    function approve(address spender, uint256 amount) external returns (bool);
+    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+
+contract SalchainToken is IERC20 {
+    using SafeMath for uint256;
+
+    string  public  name;
+    string  public  symbol;
+    uint8   public  decimals;
+    uint256 public  totalSupply_;
+
+    mapping(address => uint256) balances;
+    mapping(address => mapping (address => uint256)) allowed;
+
+
+    constructor()  {
+        name = "WorkTHR";
+        symbol = "WorkTHR";
+        decimals = 18;
+        totalSupply_ = (999999999 * 10**18);     // total tokens would equal (totalSupply_/10**decimals)=1000
+        balances[msg.sender] = totalSupply_;
+    }
+
+    function totalSupply() public override view returns (uint256) {
+        return totalSupply_;
+    }
+
+    function balanceOf(address tokenOwner) public override view returns (uint256) {
+        return balances[tokenOwner];
+    }
+
+    function transfer(address receiver, uint256 numTokens) public override returns (bool) {
+        require(numTokens <= balances[msg.sender]);
+        balances[msg.sender] = balances[msg.sender].sub(numTokens);
+        balances[receiver] = balances[receiver].add(numTokens);
+        emit Transfer(msg.sender, receiver, numTokens);
+        return true;
+    }
+
+    function approve(address delegate, uint256 numTokens) public override returns (bool) {
+        allowed[msg.sender][delegate] = numTokens;
+        emit Approval(msg.sender, delegate, numTokens);
+        return true;
+    }
+
+    function allowance(address owner, address delegate) public override view returns (uint) {
+        return allowed[owner][delegate];
+    }
+
+    function transferFrom(address owner, address buyer, uint256 numTokens) public override returns (bool) {
+        require(numTokens <= balances[owner]);
+        require(numTokens <= allowed[owner][msg.sender]);
+
+        balances[owner] = balances[owner].sub(numTokens);
+        allowed[owner][msg.sender] = allowed[owner][msg.sender].sub(numTokens);
+        balances[buyer] = balances[buyer].add(numTokens);
+        emit Transfer(owner, buyer, numTokens);
+        return true;
+    }
+}
+
+library SafeMath {
+    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+      assert(b <= a);
+      return a - b;
+    }
+
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
+      uint256 c = a + b;
+      assert(c >= a);
+      return c;
+    }
+}
+[/code]
 
 
