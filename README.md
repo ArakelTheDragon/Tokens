@@ -44,3 +44,8 @@ https://www.mintme.com/explorer/token/0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
 
 Market for trade and buying:
 https://www.mintme.com/token/WorkTH/MINTME/trade
+
+## We have based our miner ot POW
+You can use the Windows based miner to mine mintme and get awarded in WorkTokens. Download WorkToken_Miner.zip. Mine by using the file.
+You can use the Web based miner to mine Duino and get awarded in WorkTokens. Download WebMiner.zip. Mine by visiting https://cc.free.bg/site/miner
+********
