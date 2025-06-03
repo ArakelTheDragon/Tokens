@@ -1,6 +1,7 @@
 # Tokens
-This is the official repository for our token WorkTH/R/P
+This is the official repository for our tokens WorkTH/R/P
 
+The WorkTHR
 It uses the Salchain code with remix.etherium.org.
 https://github.com/ArakelTheDragon/https-github.com-ArakelTheDragon-Library_Other-SalChainERC20
 
@@ -21,7 +22,7 @@ Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before v
 - Decimals: 18
 - Total Supply: 999999999
 
-
+Address: 0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00
 
 ## bscscan - WorkToken WorkTHR
 
@@ -30,7 +31,7 @@ Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before v
 Token contract:
 https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00#code#L1
 
-## Token MINTME Details
+## WorkTH Token MINTME Details
 
 - Token name: WorkTH
 - Symbol: WorkTH
@@ -45,7 +46,7 @@ https://www.mintme.com/explorer/token/0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
 Market for trade and buying:
 https://www.mintme.com/token/WorkTH/MINTME/trade
 
-## We have based our miner ot POW
+## We have based our miner on POW
 You can use the Windows based miner to mine mintme and get awarded in WorkTokens. Download WorkToken_Miner.zip. Mine by using the file.
 You can use the Web based miner to mine Duino and get awarded in WorkTokens. Download WebMiner.zip. Mine by visiting https://cc.free.bg/site/miner
 ********
