@@ -1,52 +1,79 @@
-# Tokens
-This is the official repository for our tokens WorkTH/R/P
+# 🪙 Tokens Repository
 
-The WorkTHR
-It uses the Salchain code with remix.etherium.org.
-https://github.com/ArakelTheDragon/https-github.com-ArakelTheDragon-Library_Other-SalChainERC20
+This is the official repository for our token ecosystem, featuring:
 
-The original token is based on the ERC-20, ours is based on the BEP-20
+- **WorkTHR** on Binance Smart Chain (BEP-20)
+- **WorkTH** on MintMe Blockchain (MINTME)
 
-Our token on the minme blockchain is called [WorkTH](https://www.mintme.com/token/WorkTH).
+---
 
-# Creating BEP20-Token
-Creating BEP-20 token on bnb chain, using Remix IDE (Solidity ^0.8.14)
-NVM Paris
-No optimization
-Flatten the code from [remix.etherium.org](https://remix.ethereum.org/) before verifying it on [[bscscan.com](https://bscscan.com/advanced-filter?fadd=0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00&tadd=0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00&txntype=2)](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
+## 🔷 WorkTHR Token (BEP-20 on BNB Chain)
 
-## Token BSCSCAN Details
+WorkTHR is built using the [SalChainERC20 contract](https://github.com/ArakelTheDragon/https-github.com-ArakelTheDragon-Library_Other-SalChainERC20) as a foundation, adapted through [Remix IDE](https://remix.ethereum.org/). 
 
-- Token name: WorkTHR
-- Symbol: WorkTHR
-- Decimals: 18
-- Total Supply: 999999999
+> 🧱 While the original implementation is ERC-20, WorkTHR uses the BEP-20 standard to function on the Binance Smart Chain.
 
-Address: 0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00
+### ⚙️ Deployment Details
 
-## bscscan - WorkToken WorkTHR
+- **IDE:** Remix (Solidity ^0.8.14)
+- **Build:** NVM Paris, No optimization
+- **Verification:** Code was flattened before verifying on [BscScan](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
 
-[Link: WorkToken](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
+### 📄 Token Information
 
-Token contract:
-https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00#code#L1
+- **Token Name:** WorkTHR  
+- **Symbol:** WorkTHR  
+- **Decimals:** 18  
+- **Total Supply:** 999,999,999  
+- **Contract Address:** `0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00`
 
-## WorkTH Token MINTME Details
+### 🔍 BscScan Links
 
-- Token name: WorkTH
-- Symbol: WorkTH
-- Decimals: 18
-- Total Supply: 10000000
+- [WorkTHR Token Overview](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00)
+- [WorkTHR Token Contract Code](https://bscscan.com/address/0xffc4f8Bde970D87f324AefB584961DDB0fbb4F00#code)
 
-Address: 0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
+---
 
-MINTME token explorer:
-https://www.mintme.com/explorer/token/0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f
+## 🟨 WorkTH Token (MintMe Platform)
 
-Market for trade and buying:
-https://www.mintme.com/token/WorkTH/MINTME/trade
+[WorkTH](https://www.mintme.com/token/WorkTH) is a companion token on the MintMe blockchain. It supports decentralized crowdfunding and public trading.
 
-## We have based our miner on POW
-You can use the Windows based miner to mine mintme and get awarded in WorkTokens. Download WorkToken_Miner.zip. Mine by using the file.
-You can use the Web based miner to mine Duino and get awarded in WorkTokens. Download WebMiner.zip. Mine by visiting https://cc.free.bg/site/miner
-********
+### 📄 Token Information
+
+- **Token Name:** WorkTH  
+- **Symbol:** WorkTH  
+- **Decimals:** 18  
+- **Total Supply:** 10,000,000  
+- **Contract Address:** `0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f`
+
+### 🔍 MintMe Links
+
+- [Token Explorer](https://www.mintme.com/explorer/token/0x94b8e51da2bcc2f2a4871b7813f5bd1e3dd92a1f)  
+- [Trade on MintMe](https://www.mintme.com/token/WorkTH/MINTME/trade)
+
+---
+
+## ⛏️ Mining & Proof-of-Work Integration
+
+We have integrated mining capabilities into our ecosystem to allow contributors to earn WorkTokens through Proof-of-Work (PoW) participation.
+
+### 🪟 Windows Miner
+
+Mine MintMe and earn WorkTokens using our desktop application.
+
+- **Download:** `WorkToken_Miner.zip`  
+- **Instructions:** Run the included executable to begin mining.
+
+### 🌐 Web Miner (DuinoCoin)
+
+Mine DuinoCoin using our browser-based miner and get rewarded with WorkTokens.
+
+- **Access:** [Web Miner](https://cc.free.bg/site/miner)  
+- **Download:** `WebMiner.zip`
+
+---
+
+Feel free to fork, contribute, or explore more on our GitHub and official sites.
+
+📫 **Contact:** cfcbazar@gmail.com  
+🌐 **Website:** [CfCbazar.ct.ws](https://CfCbazar.ct.ws) | [cc.free.bg](https://cc.free.bg)
