@@ -59,7 +59,7 @@ We have integrated mining capabilities into our ecosystem to allow contributors 
 
 ### 🪟 Windows Miner
 
-Mine MintMe and earn WorkTokens using our desktop application.
+**This is in developmnet!** Mine MintMe and earn WorkTokens using our desktop application.
 
 - **Download:** `WorkToken_Miner.zip`  
 - **Instructions:** Run the included executable to begin mining.
