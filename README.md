@@ -6,7 +6,7 @@ This is the official repository for our token ecosystem, featuring:
 - **WorkTH** on MintMe Blockchain (MINTME)
 
 ---
-Its now possible to **buy** WorkTokens on https://cfcbazar.ct.ws
+Its now possible to **buy & stake** WorkTokens on https://cfcbazar.ct.ws
 
 ## 🔷 WorkTHR Token (ERC-20 on BNB Chain)
 
