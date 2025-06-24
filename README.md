@@ -2,16 +2,17 @@
 
 This is the official repository for our token ecosystem, featuring:
 
-- **WorkTHR** on Binance Smart Chain (BEP-20)
+- **WorkTHR** on Binance Smart Chain (ERC-20)
 - **WorkTH** on MintMe Blockchain (MINTME)
 
 ---
+Its now possible to **buy** WorkTokens on https://cfcbazar.ct.ws
 
-## 🔷 WorkTHR Token (BEP-20 on BNB Chain)
+## 🔷 WorkTHR Token (ERC-20 on BNB Chain)
 
 WorkTHR is built using the [SalChainERC20 contract](https://github.com/ArakelTheDragon/https-github.com-ArakelTheDragon-Library_Other-SalChainERC20) as a foundation, adapted through [Remix IDE](https://remix.ethereum.org/). 
 
-> 🧱 While the original implementation is ERC-20, WorkTHR uses the BEP-20 standard to function on the Binance Smart Chain.
+> 🧱 While the original implementation is ERC-20, WorkTHR uses the ERC-20 standard to function on the Binance Smart Chain.
 
 ### ⚙️ Deployment Details
 
